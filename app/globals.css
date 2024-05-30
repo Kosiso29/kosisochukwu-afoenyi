@@ -161,10 +161,11 @@
 }
 
 .dark-bg {
-    background-image: url('/assets/img/dark.jpg');
-    flex-direction: column;
-    justify-content: flex-end;
-    height: 70vh;
-    top: 50%;
-    transform: translateY(-50%);
+    background-image: url('/assets/img/dark.jpg') !important;
+    flex-direction: column !important;
+    justify-content: flex-end !important;
+    height: 70vh !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    overflow: hidden !important;
 }
