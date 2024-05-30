@@ -192,7 +192,6 @@ const Contact = () => {
                         dark ? "black" : "grey"
                       } h-160 py-11 px-26 rounded-30 outline-0 transition duration-300 placeholder:text-placeholder field-form`}
                       placeholder="YOUR MESSAGE"
-                      defaultValue={""}
                       name="message"
                       onChange={(e) => onChange(e)}
                       value={message}
