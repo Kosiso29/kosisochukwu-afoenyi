@@ -32,78 +32,82 @@ const counters = [
     {
         id: 1,
         title: 'years of <span className="block">experience</span>',
-        value: "12",
+        value: "5",
     },
     {
         id: 2,
         title: 'completed <span className="block">projects</span>',
-        value: "97",
+        value: "10",
     },
     {
         id: 3,
-        title: 'happy <span className="block">customers</span>',
-        value: "81",
+        title: 'happy <span className="block">clients</span>',
+        value: "6",
     },
-    { id: 4, title: 'awards <span className="block">won</span>', value: "53" },
+    { id: 4, title: 'certifications <span className="block">achieved</span>', value: "1" },
 ];
 
 const experiences = [
     {
         id: 1,
-        date: "2018 - Present",
-        title: "web developer",
-        company: "envato",
-        desc: "Lorem ipsum dolor sit amet, consectetur tempor incididunt ut labore adipisicing elit,",
+        date: "2023 - Present",
+        title: "Full stack developer",
+        company: "Freelance",
+        desc: ["• Granted a project to create a bicycle builder app without previous knowledge of the builder tools, and then in the end, got a 5-star rating from the client.",
+            "• Offered direct employment by a client after carrying out some front end animation work.",
+            "• Demonstrated expertise and commitment by undertaking a $100 project as part of an interview process, earning praise from the client and initiation of contract."],
     },
     {
         id: 2,
-        date: "2013 - 2018",
-        title: "UI/UX Designer",
-        company: "Themeforest",
-        desc: "Lorem ipsum dolor sit amet, consectetur tempor incididunt ut labore adipisicing elit,",
+        date: "2021 - 2023",
+        title: "Front end engineer",
+        company: "Plato",
+        desc: ["• Steered the ownership and maintenance of the company website. Structuring it such that it requires only about 0 - 10% of a developer's involvement for its update.",
+            "• Demonstrated adaptability and quick learning by seamlessly transitioning from front end to support backend work if the need arises.",
+            "• Created working scrape scripts for about 100 extension providers, and also worked on solutions to bypass captchas and bot detectors."],
     },
     {
         id: 3,
-        date: "2005 - 2013",
-        title: "consultant",
-        company: "Videohive",
-        desc: "Lorem ipsum dolor sit amet, consectetur tempor incididunt ut labore adipisicing elit,",
+        date: "2020 - 2021",
+        title: "Front end developer",
+        company: "Freelance",
+        desc: ["• Started my first upwork freelance journey and got my first job as a junior developer, and received my first 5-star rating from the client at the end for a job well done"],
+    },
+    {
+        id: 3,
+        date: "2019",
+        title: "Front end intern",
+        company: "HNG Internship",
+        desc: [""],
     },
 ];
 
 const educations = [
     {
         id: 1,
-        date: "2015",
-        title: "Engineer Degree",
-        unv: "Oxford University",
-        desc: "Lorem ipsum dolor sit amet, consectetur tempor incididunt ut labore adipisicing elit,",
+        date: "2022",
+        title: "Project Management Professional",
+        unv: "Project Management Institute",
+        desc: "",
     },
     {
         id: 2,
-        date: "2012",
-        title: "Master Degree",
-        unv: "Kiev University",
-        desc: "Lorem ipsum dolor sit amet, consectetur tempor incididunt ut labore adipisicing elit,",
-    },
-    {
-        id: 3,
-        date: "2009",
+        date: "2015",
         title: "Bachelor Degree",
-        unv: "Tunis High School",
-        desc: "Lorem ipsum dolor sit amet, consectetur tempor incididunt ut labore adipisicing elit,",
+        unv: "University of Nigeria, Nsukka",
+        desc: "Department of Electronics Engineering",
     },
 ];
 
 const skills = [
-    { id: 1, name: "html", value: "25" },
-    { id: 2, name: "javascript", value: "89" },
-    { id: 3, name: "css", value: "70" },
-    { id: 4, name: "php", value: "66" },
-    { id: 5, name: "wordpress", value: "95" },
-    { id: 6, name: "jquery", value: "50" },
-    { id: 7, name: "angular", value: "65" },
-    { id: 8, name: "react", value: "45" },
+    { id: 1, name: "html", value: "75" },
+    { id: 2, name: "css", value: "89" },
+    { id: 3, name: "javascript", value: "91" },
+    { id: 4, name: "typescript", value: "70" },
+    { id: 5, name: "react.js", value: "95" },
+    { id: 6, name: "next.js", value: "83" },
+    { id: 7, name: "node.js", value: "79" },
+    { id: 8, name: "tailwind css", value: "86" },
 ];
 
 const About = () => {
@@ -258,12 +262,17 @@ const About = () => {
                                                 {experience.company}
                                             </span>
                                         </h5>
-                                        <p
+                                        <ul
                                             className={`font-Open-sans ${dark ? "text-light-grey" : ""
                                                 } text-fs-14`}
                                         >
-                                            {experience.desc}
-                                        </p>
+                                            {experience.desc.map((item, index) => (
+                                                <>
+                                                    <li key={index}>{item}</li>
+                                                    <br />
+                                                </>
+                                            ))}
+                                        </ul>
                                     </li>
                                 ))}
                             </ul>
