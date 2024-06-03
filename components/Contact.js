@@ -40,10 +40,16 @@ const Contact = () => {
         } else {
             emailjs
                 .send(
-                    "service_gsps4gw", // service id
-                    "template_evezi69", // template id
-                    mailData,
-                    "Q3pccdLZhU-mZT7tQ" // public api
+                    "service_clha7gn", // service id
+                    "template_zndfr8h", // template id
+                    {
+                        to_name: "Kosiso",
+                        from_name: name,
+                        from_email: email,
+                        from_subject: subject,
+                        message
+                    },
+                    "pBRQpPJ313R--XnNX" // public api
                 )
                 .then(
                     (response) => {
@@ -57,9 +63,11 @@ const Contact = () => {
                             subject: "",
                             template: "tunis tailwind react",
                         });
+                        alert("Mail sent. Thank you. I'll respond ASAP");
                     },
                     (err) => {
                         console.log(err.text);
+                        alert(`Mail failed to send: ${err.text}`);
                     }
                 );
         }
@@ -110,10 +118,12 @@ const Contact = () => {
                                 {socials.map((social) => (
                                     <li key={social.id} className="inline-block">
                                         <a
-                                            href="#"
+                                            href={social.link}
                                             className={`social-item inline-block h-40 w-40 leading-lh-42 text-center text-${dark ? "white" : "black-6"
                                                 } transition duration-300 text-fs-17 mx-6 bg-${dark ? "black-2" : "light-grey hover:text-white"
                                                 } rounded-full`}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
                                         >
                                             <i className={social.icon} />
                                         </a>
