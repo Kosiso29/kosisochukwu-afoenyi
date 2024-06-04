@@ -131,7 +131,7 @@ const About = () => {
                             </h3>
                             <img
                                 className="hidden xs:block rounded-full border-4 border-solid border-black-3 w-230 h-230 mb-25 mx-auto"
-                                src="assets/img/dark-img-mobile.jpg"
+                                src="/assets/img/kosiso-picture.png"
                                 alt=""
                             />
                             <div className="flex justify-between xs:justify-start font-Open-sans">
@@ -141,7 +141,7 @@ const About = () => {
                                         key={item.id}
                                     >
                                         {item.data.map((bio) => (
-                                            <div key={bio.id} style={{ maxWidth: "300px" }}>
+                                            <div key={bio.id} style={{ maxWidth: "15rem" }}>
                                                 <span className="opacity-80">{bio.type} : </span>
                                                 <span className="xs:block custom-md-2:block font-semibold break-words" style={{ overflowWrap: "break-word" }}>
                                                     {bio.value}
@@ -268,10 +268,10 @@ const About = () => {
                                                 } text-fs-14`}
                                         >
                                             {experience.desc.map((item, index) => (
-                                                <>
+                                                <div key={index}>
                                                     <li key={index}>{item}</li>
                                                     <br />
-                                                </>
+                                                </div>
                                             ))}
                                         </ul>
                                     </li>
