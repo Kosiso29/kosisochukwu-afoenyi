@@ -42,22 +42,42 @@ const Home = ({ authorImage }) => {
                             Eager to forge strong relationships and collaborate seamlessly as a valuable team member.
                             I look forward to the opportunity to elevate your project to new heights.
                         </p>
-                        <div
-                            id="link-about"
-                            className="button group cursor-pointer overflow-hidden inline-block leading-lh-1.4 rounded-30 text-ellipsis text-center align-middle select-none transition-all duration-250 ease-in-out uppercase no-underline relative z-10 py-16 pr-70 pl-35 text-fs-15 font-semibold text-white bg-transparent outline-0 before:absolute before:-z-10 before:left-0 before:right-0 before:top-0 before:bottom-0 before:translate-x-full hover:before:translate-x-0 before:transition before:duration-300 before:ease-out"
-                            onClick={() => changeNav("about")}
-                        >
-                            <span
-                                className={`relative z-20 ${dark
-                                    ? "text-white"
-                                    : "text-black-6 group-hover:text-white transition-all duration-300"
-                                    }`}
+                        <div className="flex items-center flex-wrap" style={{ gap: "2rem" }}>
+                            <div
+                                id="link-about"
+                                className="button group cursor-pointer overflow-hidden inline-block leading-lh-1.4 rounded-30 text-ellipsis text-center align-middle select-none transition-all duration-250 ease-in-out uppercase no-underline relative z-10 py-16 pr-70 pl-35 text-fs-15 font-semibold text-white bg-transparent outline-0 before:absolute before:-z-10 before:left-0 before:right-0 before:top-0 before:bottom-0 before:translate-x-full hover:before:translate-x-0 before:transition before:duration-300 before:ease-out"
+                                onClick={() => changeNav("about")}
                             >
-                                more about me
-                            </span>
-                            <span
-                                className={`absolute -right-px bottom-0 w-55 h-55 flex items-center justify-center rounded-full text-white text-fs-19 fa fa-arrow-right bg-accent`}
-                            />
+                                <span
+                                    className={`relative z-20 ${dark
+                                        ? "text-white"
+                                        : "text-black-6 group-hover:text-white transition-all duration-300"
+                                        }`}
+                                >
+                                    more about me
+                                </span>
+                                <span
+                                    className={`absolute -right-px bottom-0 w-55 h-55 flex items-center justify-center rounded-full text-white text-fs-19 fa fa-arrow-right bg-accent`}
+                                />
+                            </div>
+                            <div
+                                id="link-about"
+                                className="button group cursor-pointer overflow-hidden inline-block leading-lh-1.4 rounded-30 text-ellipsis text-center align-middle select-none transition-all duration-250 ease-in-out uppercase no-underline relative z-10 py-16 pr-70 pl-35 text-fs-15 font-semibold text-white bg-transparent outline-0 before:absolute before:-z-10 before:left-0 before:right-0 before:top-0 before:bottom-0 before:translate-x-full hover:before:translate-x-0 before:transition before:duration-300 before:ease-out"
+                                // style={{ marginLeft: "2rem" }}
+                                onClick={() => changeNav("portfolio")}
+                            >
+                                <span
+                                    className={`relative z-20 ${dark
+                                        ? "text-white"
+                                        : "text-black-6 group-hover:text-white transition-all duration-300"
+                                        }`}
+                                >
+                                    portfolio
+                                </span>
+                                <span
+                                    className={`absolute -right-px bottom-0 w-55 h-55 flex items-center justify-center rounded-full text-white text-fs-19 fa fa-arrow-right bg-accent`}
+                                />
+                            </div>
                         </div>
                         {/* Informations Ends */}
                     </div>
