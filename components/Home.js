@@ -35,7 +35,7 @@ const Home = ({ authorImage }) => {
                             </span>
                         </h1>
                         <p className="font-Open-sans mt-15 mb-28 leading-lh-35 down-lg:mt-2.5 down-lg:mb-23 down-lg:text-fs-15 down-lg:leading-lh-30">
-                            Greetings, I am a web developer with a 5-year background,
+                            Greetings, I am a web developer with a 6-year background,
                             specializing in front end development.
                             I am enthusiastic about contributing to the triumph of every client's project,
                             aspiring to be an integral part of your initiative.
